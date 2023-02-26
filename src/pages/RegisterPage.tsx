@@ -22,7 +22,7 @@ function RegisterPage() {
   const [checkValidEmail, setcheckValidEmail] = useState(true);
 
   const setToken = useAuthStore((state) => state.setToken);
-  const setProfile = useAuthStore((state) => state.setProfile);
+
 
   const navigate = useNavigate();
 
@@ -30,14 +30,12 @@ function RegisterPage() {
     const respuesta = await RegisterRequest(email, password, name, last_Name);
     setToken(respuesta.data.token);
 
-    const resProfile = await PerfilRequest();
+    
 
-    setProfile(resProfile.data.profile);
-
-    navigate("/login");
+    navigate("/");
   };
   const volver = async () => {
-    navigate("/login");
+    navigate("/");
   };
 
   const checkPasswordValidity = (value: any) => {

@@ -30,7 +30,7 @@ function SendEmailPage() {
         style={styles.input}
       /> 
           <Button title="Enviar contraseña al correo"  onPress={() => {
-          sendemail(), navigate("/login");
+          sendemail(), navigate("/");
         }} />
         
         </SafeAreaView>

@@ -76,12 +76,12 @@ function EditProfilePage() {
           changeNameandLast(), navigate("/profile");
         }} />
       <Button title="Cambiar Contraseña" onPress={() => {
-        changePassword(), navigate("/login");
+        changePassword(), navigate("/");
         }} />
       <Button
         title="Logout"
         onPress={() => {
-          Bye(), navigate("/login");
+          Bye(), navigate("/");
         }}
       />
     </SafeAreaView>
